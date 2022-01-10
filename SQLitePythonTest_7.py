@@ -1,0 +1,23 @@
+import sqlite3
+con = sqlite3.connect("my_test_db1")
+query = "select * from stud_info"
+
+cur=con.cursor()
+cur.execute(query)
+data1 = cur.fetchone()
+print(data1)
+
+data2 = cur.fetchone()
+print(data2)
+
+data3 = cur.fetchone()
+print(data3)
+
+data4 = cur.fetchone()
+print(data4)
+data5 = cur.fetchone()
+print(data5)
+
+
+cur.close()
+con.close()
